@@ -1,0 +1,49 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <!--<ul>-->
+      <!--<li ng-repeat="r in res.results">-->
+        <!--<img src="{{r.url}}" width="{{width}}"  />-->
+      <!--</li>-->
+    <!--</ul>-->
+    <div class="bar bar-header bar-light row" >
+      <!--<div class="col">-->
+      <!--<button class="button button-clear" ng-click="showContentByCategory('福利')">-->
+        <!--福利-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col">-->
+      <!--<button class="button button-clear">-->
+        <!--IOS-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col">-->
+      <!--<button class="button button-clear">-->
+        <!--Android-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col">-->
+      <!--<button class="button button-clear">-->
+        <!--前端-->
+      <!--</button>-->
+      <!--</div>-->
+      <div class="col" ng-repeat="category in categories">
+        <button class="button button-clear" ng-click="showContentByCategory('{{category}}')">{{category}}</button>
+      </div>
+    </div>
+    <div class="list card">
+      <div ng-repeat="r in res.results">
+        <img src="{{r.url}}" width="{{width}}"  />
+      </div>
+    </div>
+    <button class="button">上一页</button>
+    <div class="row">
+      <div class="col">
+        <!--<button class="button button-clear" ng-click="prevPage('福利')">上一页</button>-->
+        <button class="button button-clear">上一页</button>
+      </div>
+      <!--<div class="col">-->
+        <!--<button class="button button-clear" ng-click="nextPage('福利')">下一页</button>-->
+      <!--</div>-->
+    </div>
+  </ion-content>
+</ion-view>
